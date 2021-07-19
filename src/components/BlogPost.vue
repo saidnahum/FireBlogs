@@ -1,5 +1,5 @@
 <template>
-  <div class="blog-wrapper">
+  <div class="blog-wrapper no-user">
 
     <div class="blog-content">
       <div>
@@ -12,7 +12,7 @@
         <router-link class="link link-light" v-if="post.welcomeScreen" to="#">
           Acceso/Registro <Arrow class="arrow arrow-light"/>
         </router-link>
-        <router-link class="link link-light" v-else to="#">
+        <router-link class="link" v-else to="#">
           Ver el Post <Arrow class="arrow"/>
         </router-link>
       </div>
@@ -45,9 +45,8 @@ export default {
       max-height: 650px;
       flex-direction: row;
     }
-  }
 
-  .blog-content{
+    .blog-content{
     order: 2;
     flex: 4;
     display: flex;
@@ -113,9 +112,9 @@ export default {
         }
       }
     }
-  }
+    }
 
-  .blog-photo {
+    .blog-photo {
     order: 1;
     flex: 3;
     box-shadow: 0px 4px 6px -1px rgba(0,0,0,0.1), 0px 2px 4px -1px rgba(0,0,0,0.06);
@@ -132,5 +131,27 @@ export default {
       height: 100%;
       object-fit: cover;
     }
+    }
+
+    &:nth-child(even) {
+      .blog-content {
+        order: 2;
+      }
+
+      .blog-photo{
+        order: 1;
+      }
+    }
   }
+
+  .no-user:first-child {
+    .blog-content {
+      background-color: #303030;
+      color: #fff;
+    }
+  }
+
+  
+
+  
 </style>
