@@ -2,6 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Posts from "../views/Posts";
+import Login from "../views/Login";
+import Register from "../views/Register";
+import ForgotPassword from "../views/ForgotPassword";
 
 
 Vue.use(VueRouter);
@@ -21,6 +24,30 @@ const routes = [
     component: Posts,
     meta: {
       title: "Posts"
+    }
+  },
+  {
+    path: "/acceso",
+    name: "Login",
+    component: Login,
+    meta: {
+      title: "Acceso"
+    }
+  },
+  {
+    path: "/registro",
+    name: "Register",
+    component: Register,
+    meta: {
+      title: "Registro"
+    }
+  },
+  {
+    path: "/pass-olvidada",
+    name: "ForgotPassword",
+    component: ForgotPassword,
+    meta: {
+      title: "Contraseña olvidada"
     }
   }
   
