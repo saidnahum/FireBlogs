@@ -26,7 +26,7 @@
             <router-link class="link" :to="{ name: 'Home' }">Inicio</router-link>
             <router-link class="link" :to="{ name: 'Posts' }">Blogs</router-link>
             <router-link class="link" to="#">Crear Post</router-link>
-            <router-link class="link" :to="{ name: 'Login' }">Acceder / Registro</router-link>
+            <router-link v-if="!user" class="link" :to="{ name: 'Login' }">Acceder / Registro</router-link>
           </ul>
         </div>
       </div>
@@ -50,6 +50,11 @@ export default {
     instagram,
     linkedin,
   },
+  computed: {
+    user(){
+      return this.$store.state.user
+    }
+  }
 };
 </script>
 
