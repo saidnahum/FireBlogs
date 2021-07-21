@@ -14,7 +14,7 @@
       <div class="container">
         <h2>No te pierdas ningun Post. Registrate tu cuenta gratis ahora!!</h2>
         <router-link class="router-button" to="#">
-          Registrarse a FireBlogs <Arrow class="arrow arrow-light"/>
+          Registrate a FireBlogs <Arrow class="arrow arrow-light"/>
         </router-link>
       </div>
     </div>
